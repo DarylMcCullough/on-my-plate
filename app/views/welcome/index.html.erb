@@ -1,23 +1,19 @@
 <div id="headerwrap">
+	<% if ! user_signed_in? %>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 					<h1>Organize your life!</h1>
 					<h1>What's on your plate?</h1>
-
-					<form class="form-inline" role="form">
-					  <div class="form-group">
-					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email address">
-					    <input type="password" class="form-control" id="pswd" placeholder="Choose a password">
-					    
-					  </div>
-					  <button type="submit" class="btn btn-warning btn-lg">Sign Up!</button>
-					</form>					
+					<div class="signup">
+						<%= render :file => 'devise/registrations/new' %>
+					</div>
 				</div><!-- /col-lg-6 -->
 
 			</div><!-- /row -->
  
 		</div><!-- /container -->
+		<% end %>
  
 	</div><!-- /headerwrap -->
 	
@@ -25,29 +21,29 @@
 	<div class="container">
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Your Landing Page<br/>Looks Wonderful Now.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
+				<h1><span class="app-title">On My Plate</span><br>Keep track of what's important!</h1>
+				<h3>Self-destructing tasks keep your to-do list uncluttered.</h3>
 			</div>
 		</div><!-- /row -->
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
 				<img src="assets/img/ser01.png" width="180" alt="">
-				<h4>1 - Browser Compatibility</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<h4>1 - Cloud storage</h4>
+				<p></p>Your tasks are stored on the cloud, so they are always available, from any computer or smart phone.</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 				<img src="assets/img/ser02.png" width="180" alt="">
-				<h4>2 - Email Campaigns</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<h4>2 - Security (TBD)</h4>
+				<p>Your data will be encrypted, to prevent hackers from getting your task data.</p>
 
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 				<img src="assets/img/ser03.png" width="180" alt="">
-				<h4>3 - Gather Your Notes</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<h4>3 - Expiring tasks</h4>
+				<p>Items on your to-do list expire after seven days, leaving only the most important tasks.</p>
 
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
@@ -61,7 +57,7 @@
 				  <div class="form-group">
 				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
 				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
+				  <button type="submit" class="btn btn-warning btn-lg">Send me more information!</button>
 				</form>					
 			</div>
 			<div class="col-lg-3"></div>
@@ -72,8 +68,8 @@
 	<div class="container">
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Flatty is for Everyone.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
+				<h1><span class="app-title">On My Plate</span><br>is for Everyone.</h1>
+				<h3>It is so powerful, yet so easy to use. Students, teachers, parents and entrepreneurs will all love <span class="app-title">On My Plate</span></h3>
 			</div>
 		</div><!-- /row -->
 	
@@ -86,18 +82,22 @@
 				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+   				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 				  </ol>
 				
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner">
 				    <div class="item active">
-				      <img src="assets/img/p01.png" alt="">
+				    	<%= image_tag("student.jpg",  size: '320') %>
 				    </div>
 				    <div class="item">
-				      <img src="assets/img/p02.png" alt="">
+				    	<%= image_tag("teacher.jpg") %>
 				    </div>
 				    <div class="item">
-				      <img src="assets/img/p03.png" alt="">
+				    	<%= image_tag("parent.jpg") %>
+				    </div>
+				    <div class="item">
+				    	<%= image_tag("entrepreneur.jpg") %>
 				    </div>
 				  </div>
 				</div>			
@@ -113,7 +113,7 @@
 				  <div class="form-group">
 				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
 				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
+				  <button type="submit" class="btn btn-warning btn-lg">Put me on your mailing list!</button>
 				</form>					
 			</div>
 			<div class="col-lg-3"></div>
@@ -124,30 +124,30 @@
 	<div class="container">
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Our Awesome Team.<br/>Design Lovers.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
+				<h1>Our Awesome Team.<br/>Lovers of To-Do Lists.</h1>
+				<h3>Our team has dedicated our lives to improving to-do lists.</h3>
 			</div>
 		</div><!-- /row -->
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic1.jpg" width="140" alt="">
-				<h4>Michael Robson</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+		    	<%= image_tag("wonder-woman.jpg", class: "img-circle", width:"140") %>
+				<h4>Wonder Woman -- Mentor</h4>
+				<p>Wonder Woman fights injustice and bad coding practices.</p>
 				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic2.jpg" width="140" alt="">
-				<h4>Pete Ford</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+		    	<%= image_tag("vince.jpg", class: "img-circle", width:"140") %>
+				<h4>Vince -- Mentor Emeritus</h4></h4>
+				<p>Vince invented the concept of a to-do list.</p>
 				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic3.jpg" width="140" alt="">
-				<h4>Angelica Finning</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+		    	<%= image_tag("daryl-2.jpg", class: "img-circle", width:"140") %>
+				<h4>Daryl McCullough -- Coder</h4>
+				<p>Daryl McCullough did most of the coding for On My Plate. He doesn't want to use a photograph because he is in the witness protection program.</p>
 				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
@@ -161,7 +161,7 @@
 				  <div class="form-group">
 				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
 				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
+				  <button type="submit" class="btn btn-warning btn-lg">I want to join your team!</button>
 				</form>					
 			</div>
 			<div class="col-lg-3"></div>

@@ -161,3 +161,43 @@ i {
 #headerwrap input[type="text"] {
  background-color:wheat;
 }
+
+#main-content {
+ padding-top: 25px;
+}
+
+.app-title {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 150%;
+    font-weight: Bold;
+}
+
+.signup h2 {
+	color: white;
+	
+}
+
+.signup a {
+    color: white;
+}
+
+.signup a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.signup label {
+    color:white;
+}
+
+.signup label:hover {
+    color:white;
+    font-weight: bold;
+}
+
+li span.navbar-link {
+    color:white;
+    font-weight: bold;
+    margin-top: 50px;
+    padding-bottom: 12px;
+}

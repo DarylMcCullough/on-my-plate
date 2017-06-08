@@ -21,16 +21,31 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><b>ON MY PLATE</b></a>
+          <ul class="nav navbar-nav navbar-left">
+      
+        <li><%= link_to "ON MY PLATE: Home", root_path, :class => 'navbar-brand'  %></li>
+        </ul>
+       
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Already signed up?</a></li>
+            
+            <% if user_signed_in? %>
+                  <li><a class="navbar-link">Signed in as: <strong><%= current_user.email %></strong> </a></li>
+                   <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
+                   <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+            <% else %>
+              <li><%= link_to "Already signed up?", new_user_session_path, :class => 'navbar-link'  %></li>
+            <% end %>
+            
+            <!-- <li><a href="#">Already signed up?</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-      <%= yield %>
+    <div class="container" id="main-content">
+        <%= yield %>
+    </div>
 
 </body>
 </html>
