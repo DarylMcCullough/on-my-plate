@@ -140,7 +140,8 @@ i {
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
-    background-size: 100%;
+    /*background-size: 100%;*/
+    background-size: cover;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -188,6 +189,7 @@ i {
 
 .signup label {
     color:white;
+    font-size: 110%;
 }
 
 .signup label:hover {
@@ -196,8 +198,12 @@ i {
 }
 
 li span.navbar-link {
-    color:white;
-    font-weight: bold;
-    margin-top: 50px;
-    padding-bottom: 12px;
+    position: relative !important;
+    display: block !important;
+    padding: 10px 15px !important;
+    color: white !important;
+}
+
+#main-content {
+    width: 100%;
 }

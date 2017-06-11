@@ -6,7 +6,7 @@
 					<h1>Organize your life!</h1>
 					<h1>What's on your plate?</h1>
 					<div class="signup">
-						<%= render :file => 'devise/registrations/new' %>
+						<%= render :file => 'registrations/new' %>
 					</div>
 				</div><!-- /col-lg-6 -->
 
@@ -28,20 +28,20 @@
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
-				<img src="assets/img/ser01.png" width="180" alt="">
+				<%= image_tag("cloud.jpg",  size: '180') %>
 				<h4>1 - Cloud storage</h4>
 				<p></p>Your tasks are stored on the cloud, so they are always available, from any computer or smart phone.</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img src="assets/img/ser02.png" width="180" alt="">
+				<%= image_tag("security.gif",  size: '180') %>
 				<h4>2 - Security (TBD)</h4>
 				<p>Your data will be encrypted, to prevent hackers from getting your task data.</p>
 
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img src="assets/img/ser03.png" width="180" alt="">
+				<%= image_tag("expired.jpg",  size: '180') %>
 				<h4>3 - Expiring tasks</h4>
 				<p>Items on your to-do list expire after seven days, leaving only the most important tasks.</p>
 
@@ -82,7 +82,7 @@
 				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-   				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+   				    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
 				  </ol>
 				
 				  <!-- Wrapper for slides -->
@@ -91,13 +91,13 @@
 				    	<%= image_tag("student.jpg",  size: '320') %>
 				    </div>
 				    <div class="item">
-				    	<%= image_tag("teacher.jpg") %>
+				    	<%= image_tag("teacher.jpg",  size: '320') %>
 				    </div>
 				    <div class="item">
-				    	<%= image_tag("parent.jpg") %>
+				    	<%= image_tag("parent.jpg",  size: '320') %>
 				    </div>
 				    <div class="item">
-				    	<%= image_tag("entrepreneur.jpg") %>
+				    	<%= image_tag("entrepreneur.jpg",  size: '320') %>
 				    </div>
 				  </div>
 				</div>			
