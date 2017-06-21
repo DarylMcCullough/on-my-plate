@@ -1,4 +1,17 @@
-<h1>Welcome to <span class="app-title">On My Plate</span>, <%= @user.username %></h1>
+<h1><span class="app-title">On My Plate</span>: User Home</h1>
 
-<h3>Your email address: <%= @user.email %></h3>
-<h3>Your username: <%= @user.username %></h3>
+<h3>Your email address: <span class="user-field"><%= @user.email %></span></h3>
+<h3>Your username: <span class="user-field"><%= @user.username %></span></h3>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>TO-DO Items</h3>
+        <%= render @user.items %>
+        
+        <% if current_user %>
+        <br/>
+        <%= render 'items/form', item: Item.new, user: @user %>
+    <% end %>
+    </div>
+    
+</div>

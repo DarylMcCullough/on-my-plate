@@ -1,0 +1,5 @@
+ <%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
+  <div class="media-body">
+   <%= item.name %>  <%= link_to '<i class="glyphicon glyphicon-trash"></i> Delete'.html_safe, item, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' } %>
+  </div>
+ <% end %>
