@@ -1,7 +1,2 @@
- <%= content_tag :div, class: 'media row', id: "item-#{item.id}" do %>
-      <div class="col-md-8">
-   <span class="glyphicon glyphicon-asterisk bullet"></span>
-   <span><%= item.name %></span>  
-   <%= link_to '<i class="glyphicon glyphicon-ok"></i> Mark it as completed'.html_safe, item, class: :checkmark, method: :delete, data: { confirm: 'Are you sure you want to mark this item as done?' } %>
-      </div>
- <% end %>
+<li class="list-group-item"><%= item.name %> 
+<%= link_to '<i class="glyphicon glyphicon-ok"></i> Mark it as completed'.html_safe, item, class: "checkmark pull-right", method: :delete, data: { confirm: 'Are you sure you want to mark this item as done?' } %></li>

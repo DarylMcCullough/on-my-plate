@@ -113,10 +113,15 @@ a:after {
 	margin-bottom: 40px;
 }
 
+form.my-form {
+    width: 100%;
+}
+
+
+
 .form-control {
 	height: 42px;
 	font-size: 18px;
-	width: 280px;
 	background-color: cornsilk;
 }
 
@@ -255,4 +260,29 @@ h4 {
 
 i {
     color: #502916;
+}
+
+.list-group-item {
+    background-color: cornsilk;
+    color: #502916;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: chocolate;
+    color: #3c1f10;
+}
+
+.btn-default:focus, .btn-default:hover {
+    background-color:  #b67102;
+    color: white;
+}
+
+.form-group {
+    width: 90%;
+}
+
+.my-wide-form {
+    width: 100% !important;
 }
