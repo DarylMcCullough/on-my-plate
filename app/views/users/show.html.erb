@@ -1,11 +1,16 @@
-<h1><span class="app-title">On My Plate</span>: User Home</h1>
+<div class="user-header"><h1><span class="app-title">On My Plate</span>: User Home</h1>
 
 <h3>Your email address: <span class="user-field"><%= @user.email %></span></h3>
 <h3>Your username: <span class="user-field"><%= @user.username %></span></h3>
 
+</div>
+
+
+<h3>TO-DO Items</h3>
 <div class="row">
+    
     <div class="col-md-8">
-        <h3>TO-DO Items</h3>
+
         <%= render @user.items %>
         
         <% if current_user %>

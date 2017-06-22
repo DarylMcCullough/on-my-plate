@@ -1,19 +1,17 @@
 class ItemsController < ApplicationController
 
-  def create
-    @item = Item.new(item_params)
-    @item.user = current_user
+    def create
+        @item = Item.new(item_params)
+        @item.user = current_user
 
-
-     if @item.save
-       puts "saving"
-       redirect_to users_show_path, notice: "Item was saved successfully."
-     else
-       flash.now[:alert] = "Error creating item. Please try again."
-       render :new
-     end
-
-   end
+        if @item.save
+            flash[:notice] = "Item was saved successfully."
+            redirect_to root_path
+        else
+            flash[:alert] = "Error creating item. Please try again."
+            redirect_to root_path
+        end
+    end
    
    def destroy
      item = Item.find(params[:id])
@@ -33,4 +31,4 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name)
     end
- end
+end
