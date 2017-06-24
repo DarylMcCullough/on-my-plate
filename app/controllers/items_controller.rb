@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
        flash[:notice] = "Item was deleted."
        redirect_to root_path
      else
-       flash[:alert] = "Comment couldn't be deleted. Try again."
+       flash[:alert] = "Item couldn't be deleted. Try again."
        redirect_to root_path
      end
    end
