@@ -11,6 +11,11 @@ module WelcomeHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+  
+  def signup?
+    variable = instance_variable_get(:@form_state)
+    variable == 'sign_up'
+  end
 
   def devise_error_messages!
     return "" if resource.errors.empty?

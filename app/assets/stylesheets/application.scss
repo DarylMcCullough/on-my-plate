@@ -102,8 +102,13 @@ a:after {
 	color: white;
 }
 
+.navbar-default .navbar-nav > li {
+    /*background-color: #c7b793;*/
+    background-color: wheat;
+}
+
 .navbar-default .navbar-nav > li > a {
-	color: white;
+	    color: #502916;
 }
 
 /* Helpers */
@@ -113,10 +118,15 @@ a:after {
 	margin-bottom: 40px;
 }
 
+form.my-form {
+    width: 100%;
+}
+
+
+
 .form-control {
 	height: 42px;
 	font-size: 18px;
-	width: 280px;
 	background-color: cornsilk;
 }
 
@@ -150,7 +160,7 @@ i {
 }
 
 #headerwrap h1 {
-	margin-top: 60px;
+	margin-top: 15px;
 	margin-bottom: 15px;
 	color: white;
  text-shadow: 2px 2px 4px #000000;
@@ -160,7 +170,7 @@ i {
 }
 
 #headerwrap input[type="text"] {
- background-color: white;
+ background-color: cornsilk;
 }
 
 #main-content {
@@ -171,6 +181,7 @@ i {
     font-family: Impact, Charcoal, sans-serif;
     font-size: 150%;
     font-weight: Bold;
+    color: #3c1f10;
 }
 
 .signup h2 {
@@ -201,9 +212,156 @@ li span.navbar-link {
     position: relative !important;
     display: block !important;
     padding: 10px 15px !important;
-    color: white !important;
+    color: #502916 !important;
 }
 
 #main-content {
     width: 100%;
+}
+
+.user-field {
+    color: black;
+    font-family: 'Audiowide', cursive;
+}
+
+span.bullet {
+    margin-right: 6px;
+}
+
+
+hr.divider {
+    height: 3px;
+    border:solid;
+    background-color: tan;
+}
+
+.user-header {
+	background-image: url('/assets/plate.JPG');
+	background-repeat: no-repeat;
+	background-attachment: center;
+	background-position: 80% 65%;
+    color: #3c1f10;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+.user-header h3 {
+    color: #502916;
+}
+
+.checkmark {
+    color: #502916;
+}
+
+.user-header h1 {
+    color: #3c1f10;
+}
+
+h3 {
+    color: #502916;
+}
+
+h4 {
+        color: #502916;
+}
+
+i {
+    color: #502916;
+}
+
+.list-group-item {
+    background-color: cornsilk;
+    color: #502916;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: tan;
+    color: #3c1f10;
+}
+
+.btn-default:focus, .btn-default:hover {
+    background-color:  #b67102;
+    color: white;
+}
+
+.form-group {
+    width: 90%;
+}
+
+.my-wide-form {
+    width: 100% !important;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- 
+
+from https://www.codementor.io/tips/4292721368/twitter-bootstrap-3-sticky-footer*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: cornsilk;
+  overflow: hidden;
+}
+
+#main-content {
+    position:absolute; 
+    top:25px; 
+    bottom:60px; 
+    overflow:auto;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.user-content {
+    padding: 15px;
+}
+
+
+button.close {
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+.welcome-content {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.sign-in {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sign-up-plain {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sign-up-plain input {
+    background-color: cornsilk;
+}
+
+.foo {
+    background: rgba(210, 180, 140, 0.5);
+    border-radius: 15%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-top: -20px;
 }

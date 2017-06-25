@@ -1,0 +1,9 @@
+<ul class="list-group">
+       <li class="list-group-item"><%= form_for item, html: { class: 'form-inline my-form col-10' } do |f| %>
+   <div class="form-group">
+     <%= f.label :name, class: 'sr-only' %>
+     <%= f.text_field :name, class: 'form-control my-wide-form', placeholder: "TO-DO" %>
+   </div>
+   <%= f.submit "Create Item", class: 'btn btn-default pull-right' %>
+ <% end %></li>
+</ul>

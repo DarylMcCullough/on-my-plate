@@ -27,7 +27,7 @@
  group :development, :test do
    gem 'byebug'
    gem 'spring'
-   gem 'rspec-rails'
+   gem 'rspec-rails', ">= 2.0.0.beta"   
    gem 'shoulda'
    gem 'faker'
    gem 'factory_girl_rails'
