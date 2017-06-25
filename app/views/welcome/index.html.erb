@@ -2,12 +2,17 @@
 	<% if ! user_signed_in? %>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-8 foo">
+
 					<h1>Organize your life! <br>(What's on your plate?)</h1>
 					<div class="signup">
-						<%= render :file => 'registrations/new' %>
+						<% if signup? %>
+							<%= render :file => 'registrations/new' %>
+						<% else %>
+						<%= render :file => 'sessions/new' %>
+						<% end %>
 					</div>
-				</div><!-- /col-lg-6 -->
+				</div><!-- /col-lg-8 -->
 
 			</div><!-- /row -->
  
