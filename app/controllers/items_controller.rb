@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
      if item.destroy
         flash[:notice] = "Item was deleted."
         respond_to do |format|
-            format.html { redirect_to ponies_url }
+            format.html { redirect_to users_show_path }
             format.json { head :no_content }
             format.js   { render :layout => false }
         end
