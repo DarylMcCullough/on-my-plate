@@ -236,6 +236,10 @@ hr.divider {
 	background-attachment: center;
 	background-position: 80% 65%;
     color: #3c1f10;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
 }
 
 .user-header h3 {
@@ -285,4 +289,57 @@ i {
 
 .my-wide-form {
     width: 100% !important;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- 
+
+from https://www.codementor.io/tips/4292721368/twitter-bootstrap-3-sticky-footer*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: cornsilk;
+  overflow: hidden;
+}
+
+#main-content {
+    position:absolute; 
+    top:25px; 
+    bottom:60px; 
+    overflow:auto;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.user-content {
+    padding: 15px;
+}
+
+
+button.close {
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+.welcome-content {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.sign-in {
+    padding-left: 15px;
+    padding-right: 15px;
 }
