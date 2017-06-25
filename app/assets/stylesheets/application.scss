@@ -170,7 +170,7 @@ i {
 }
 
 #headerwrap input[type="text"] {
- background-color: white;
+ background-color: cornsilk;
 }
 
 #main-content {
@@ -279,7 +279,7 @@ i {
 
 .btn {
     padding: 8px 20px;
-    background-color: chocolate;
+    background-color: tan;
     color: #3c1f10;
 }
 
@@ -347,4 +347,13 @@ button.close {
 .sign-in {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.sign-up-plain {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sign-up-plain input {
+    background-color: cornsilk;
 }
