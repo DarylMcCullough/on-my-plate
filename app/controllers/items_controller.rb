@@ -15,13 +15,16 @@ class ItemsController < ApplicationController
    
    def destroy
      item = Item.find(params[:id])
-
+     # from https://www.tutorialspoint.com/ruby-on-rails/rails-and-ajax.htm
      if item.destroy
-       flash[:notice] = "Item was deleted."
-       redirect_to root_path
+        flash[:notice] = "Item was deleted."
+        respond_to do |format|
+            format.html { redirect_to ponies_url }
+            format.json { head :no_content }
+            format.js   { render :layout => false }
+        end
      else
        flash[:alert] = "Item couldn't be deleted. Try again."
-       redirect_to root_path
      end
    end
    
