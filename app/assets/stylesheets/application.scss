@@ -107,8 +107,21 @@ a:after {
     background-color: wheat;
 }
 
+.navbar-default .navbar-nav > li:not(:first-child) {
+    /*background-color: #c7b793;*/
+    border-left: 1px solid  #bf935a;
+}
+
+.navbar-default .navbar-nav.navbar-left > li {
+    padding-left: 10px;
+}
+
 .navbar-default .navbar-nav > li > a {
 	    color: #502916;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	    background-color: #bf935a;
 }
 
 /* Helpers */
@@ -358,10 +371,11 @@ button.close {
     background-color: cornsilk;
 }
 
-.foo {
+.welcome-box {
     background: rgba(210, 180, 140, 0.5);
     border-radius: 15%;
     margin-bottom: 20px;
     padding-bottom: 20px;
     margin-top: -20px;
 }
+
