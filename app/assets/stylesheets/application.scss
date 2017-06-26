@@ -383,5 +383,7 @@ button.close {
 .my-item-list {
     max-height: 250px;
     overflow-y: auto;
+    overflow-x: hidden;
+    width: 60%;
 }
 
