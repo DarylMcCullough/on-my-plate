@@ -1,9 +1,8 @@
-<tr class="list-group-item">
+<% index = item_counter + 1 %>
+<tr>
+    <td><strong><%= index %></strong></td>
     <td><strong><%= item.name %></strong></td>
-    <td><em><%= time_til_expiration(item.created_at + 7.days %>)</em></td>
-    <td>
-        <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok delete_item', remote: true, data: { confirm: 'Are you sure you want to mark this item as done?' }, :title => 'Mark complete', 
-        :rel => 'tooltip', "data-placement" => "bottom" %>
-    </td>
+    <td><%= time_til_expiration(item.created_at + 7.days)%></td>
+    <td><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok delete_item', remote: true, data: { confirm: 'Are you sure you want to mark this item as done?' }, :title => 'Mark complete', 
+        :rel => 'tooltip', "data-placement" => "bottom" %></td>
 </tr>
-    

@@ -389,12 +389,22 @@ button.close {
     overflow-y: auto;
     overflow-x: hidden;
     width: 80%;
+    background-color: cornsilk;
+    color: #502916;
+
 }
 
 .delete_item {
-    padding-right: 100px;
+    color: #556B2F;
 }
 
 .my-sized-button {
-    width: 13%;
+    width: 100%;
 }
+
+.my-form-table {
+    table-layout: fixed;
+    width: 80%;
+}
+
+

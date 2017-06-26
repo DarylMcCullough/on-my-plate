@@ -8,7 +8,7 @@
 <div class="user-content">
 
 <h3>TO-DO Items</h3>
-<table class="table table-striped table-condensed my-item-list">
+<table class="table table-bordered table-condensed my-item-list">
         <thead>
                 <tr>
                         <th>#</th>
@@ -24,7 +24,12 @@
 <% if current_user %>
         <br/>
         <h4>Add new to-do item</h4>
-        <%= render 'items/form', item: Item.new, user: @user %>
+        <table class="table table-bordered table-condensed my-item-list">
+        <tbody>
+               <%= render 'items/form', item: Item.new, user: @user %>
+        </tbody>
+        </table>
+        
 <% end %>
 </div>
     
