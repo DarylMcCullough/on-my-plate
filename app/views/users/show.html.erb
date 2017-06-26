@@ -5,16 +5,31 @@
                 <h3>Your username: <span class="user-field"><%= @user.username %></span></h3>
 </div>
 
-<div class="user-content container">
+<div class="user-content">
 
 <h3>TO-DO Items</h3>
-<ul class="list-group my-item-list">
-        <%= render @user.items %>
-</ul>
+<table class="table table-bordered table-hover table-condensed my-item-list">
+        <thead>
+                <tr>
+                        <th>#</th>
+                        <th>To do item</th>
+                        <th>Expires</th>
+                        <th>Mark as completed</th>
+                </tr>
+        </thead>
+        <tbody>
+                <%= render @user.items %>
+        </tbody>
+</table>
 <% if current_user %>
         <br/>
         <h4>Add new to-do item</h4>
-        <%= render 'items/form', item: Item.new, user: @user %>
+        <table class="table table-bordered table-condensed my-item-list">
+        <tbody>
+               <%= render 'items/form', item: Item.new, user: @user %>
+        </tbody>
+        </table>
+        
 <% end %>
 </div>
     

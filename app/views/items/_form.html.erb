@@ -1,8 +1,10 @@
-<%= form_for item, html: { class: 'form-inline my-form col-10' } do |f| %>
-   <div class="form-group row">
-     <%= f.label :name, class: 'sr-only' %>
-     <%= f.text_field :name, class: 'form-control my-wide-form', placeholder: "TO-DO" %>
-     <%= f.submit "Create Item", class: 'btn btn-default pull-right my-sized-button' %>
-   </div>
-   
- <% end %>
+<%= form_for item, html: { class: 'form-inline my-form' } do |f| %>
+    <table class="table table-bordered table-condensed my-form-table">
+        <tbody>
+            <tr class="form-group">
+                <td class="col-xs-10"><%= f.label :name, class: 'sr-only' %><%= f.text_field :name, class: 'form-control', placeholder: "TO-DO" %></td>
+                <td class="col-xs-2"><%= f.submit "Create Item", class: 'btn btn-default my-sized-button' %></td>
+            </tr>
+        </tbody>
+    </table>
+<% end %>

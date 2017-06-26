@@ -8,7 +8,6 @@
     <meta name="author" content="">
   <title>On My Plate</title>
   <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Lato:300,400,900', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Arimo|Droid+Serif', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?css?family=Audiowide', media: 'all', 'data-turbolinks-track' => true %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -39,8 +38,12 @@
             <% if user_signed_in? %>
               <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+            <% elsif signup? %>
+              <li>
+                <%= link_to "Already signed up?", welcome_my_action_path(form_state: 'sign_in'), method: :post, class: 'navbar-link'  %></li>
+              </li>
             <% else %>
-              <li><%= link_to "Already signed up?", welcome_my_action_path, method: :post, class: 'navbar-link'  %></li>
+              <li><%= link_to "Sign up!", welcome_my_action_path(form_state: 'sign_up'), method: :post, class: 'navbar-link'  %></li>
             <% end %>
             
             <!-- <li><a href="#">Already signed up?</a></li> -->
