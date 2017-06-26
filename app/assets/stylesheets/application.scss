@@ -373,9 +373,15 @@ button.close {
 
 .welcome-box {
     background: rgba(210, 180, 140, 0.5);
-    border-radius: 15%;
+    border-radius: 10%;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
     margin-top: -20px;
+}
+
+.my-item-list {
+    max-height: 250px;
+    overflow-y: auto;
 }
 
