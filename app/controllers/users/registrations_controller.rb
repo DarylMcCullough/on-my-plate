@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
      super
+     flash[:notice] = "Signed up successfully. Please wait for your confirming email before attempting to sign in."
   end
 
   # GET /resource/edit
@@ -49,12 +50,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+   def after_sign_up_path_for(resource)
+
+     retval = super(resource)
+     return retval
+   end
 
   # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_inactive_sign_up_path_for(resource)
+
+     #retval = super(resource)
+     retval = welcome_index_path(form_state: 'sign_in')
+     return retval   
+  end
 end
